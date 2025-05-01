@@ -1,5 +1,5 @@
 # 
-# Linked lists | Python
+# Linked list | Python
 # 
 
 class Node:
