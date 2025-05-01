@@ -2,11 +2,15 @@
 # Linked list | Python
 # 
 
+
+# Linked lists node class
 class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
 
+
+# Main linked list manager class
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -20,6 +24,10 @@ class LinkedList:
         return " -> ".join(values)
 
 
+
+    #
+    # Adds a new value to the end
+    #
     def append(self, value):
         new_node = Node(value)
         if self.head is None:
@@ -31,12 +39,18 @@ class LinkedList:
         current.next = new_node
 
 
+    #
+    # Adds a new value to the start
+    #
     def prepend(self, value):
         new_node = Node(value)
         new_node.next = self.head  
         self.head = new_node
 
 
+    #
+    # Inserts a new value at index position
+    #
     def insert_at(self, index, value):
         if index < 0:
             raise IndexError("Index must be non-negative")
@@ -61,6 +75,9 @@ class LinkedList:
         current.next = new_node
 
 
+    #
+    # Deletes a node by its value
+    #
     def delete_by_value(self, value):
         if self.head is None:
             return 
@@ -77,6 +94,9 @@ class LinkedList:
             current.next = current.next.next
 
 
+    #
+    # Finds a node by its value
+    #
     def find(self, value):
         current = self.head
         index = 0
@@ -88,6 +108,9 @@ class LinkedList:
         return -1
     
 
+    #
+    # Reverses the linked list
+    #
     def reverse(self):
         prev = None
         current = self.head
@@ -97,9 +120,9 @@ class LinkedList:
             prev = current
             current = next_node
         self.head = prev
-
-
-
-
-
-
+        
+        
+        
+# 
+# Test scenarios
+# 
