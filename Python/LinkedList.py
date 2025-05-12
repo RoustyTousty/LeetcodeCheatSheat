@@ -126,3 +126,34 @@ class LinkedList:
 # 
 # Test scenarios
 # 
+# def test_linked_list():
+#     print("Testing LinkedList:")
+
+#     ll = LinkedList()
+
+
+#     ll.append(1)
+#     ll.append(2)
+#     ll.append(3)
+#     print("After append:", ll) 
+
+
+#     ll.prepend(0)
+#     print("After prepend:", ll)
+
+
+#     ll.insert_at(2, 1.5)
+#     print("After insert at index 2:", ll) 
+
+
+#     print("Index of 1.5:", ll.find(1.5)) 
+#     print("Index of 99:", ll.find(99))  
+
+
+#     ll.delete_by_value(1.5)
+#     print("After deleting 1.5:", ll) 
+
+
+#     ll.reverse()
+#     print("After reverse:", ll) 
+# test_linked_list()

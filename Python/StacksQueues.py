@@ -2,52 +2,89 @@
 # Stacks & Queues | Python
 # 
 
+
+# Stack manager class
 class Stack:
     def __init__(self):
         self.items = []
 
+
+    #
+    # Adds/Creates a new value in the stack
+    #
     def push(self, value):
         self.items.append(value)
 
-    # pop
+
+    #
+    # Removes last element from the stack
+    #
     def pop(self):
         if self.is_empty():
             raise IndexError("Pop from empty stack")
         return self.items.pop()
 
+
+    #
+    # Returns the last/peak element from the stack
+    #
     def peek(self):
         if self.is_empty():
             raise IndexError("Peek from empty stack")
         return self.items[-1]
 
+
+    #
+    # Returns if the stack is empty or not
+    #
     def is_empty(self):
         return len(self.items) == 0
 
 
+
+
+# Queue manager class
 class Queue:
     def __init__(self):
         self.items = []
 
+
+    #
+    # Adds/Creates a new value in the queue
+    #
     def enqueue(self, value):
         self.items.append(value)
 
+
+    #
+    # Removes an item from the queue
+    #
     def dequeue(self):
         if self.is_empty():
             raise IndexError("Dequeue from empty queue")
         return self.items.pop(0)
 
+
+    #
+    # Returns the last/peak element from the stack
+    #
     def peek(self):
         if self.is_empty():
             raise IndexError("Peek from empty queue")
         return self.items[0]
 
+
+    #
+    # Returns if the stack is empty or not
+    #
     def is_empty(self):
         return len(self.items) == 0
 
 
-
-# if __name__ == "__main__":
-#     # Test Stack
+# 
+# Test scenarios
+# 
+# def test_stack_and_queue():
 #     print("Testing Stack:")
 #     s = Stack()
 #     try:
@@ -61,7 +98,6 @@ class Queue:
 #     print("Popped element:", s.pop())
 #     print("Is stack empty?", s.is_empty())
 
-#     # Test Queue
 #     print("\nTesting Queue:")
 #     q = Queue()
 #     try:
@@ -74,3 +110,4 @@ class Queue:
 #     print("Front element:", q.peek())
 #     print("Dequeued element:", q.dequeue())
 #     print("Is queue empty?", q.is_empty())
+# test_stack_and_queue()
