@@ -20,8 +20,6 @@ class Stack:
     # Removes last element from the stack
     #
     def pop(self):
-        if self.is_empty():
-            raise IndexError("Pop from empty stack")
         return self.items.pop()
 
 
@@ -29,8 +27,6 @@ class Stack:
     # Returns the last/peak element from the stack
     #
     def peek(self):
-        if self.is_empty():
-            raise IndexError("Peek from empty stack")
         return self.items[-1]
 
 
@@ -60,8 +56,6 @@ class Queue:
     # Removes an item from the queue
     #
     def dequeue(self):
-        if self.is_empty():
-            raise IndexError("Dequeue from empty queue")
         return self.items.pop(0)
 
 
@@ -69,8 +63,6 @@ class Queue:
     # Returns the last/peak element from the stack
     #
     def peek(self):
-        if self.is_empty():
-            raise IndexError("Peek from empty queue")
         return self.items[0]
 
 

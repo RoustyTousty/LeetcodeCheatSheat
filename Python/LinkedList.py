@@ -52,9 +52,6 @@ class LinkedList:
     # Inserts a new value at index position
     #
     def insert_at(self, index, value):
-        if index < 0:
-            raise IndexError("Index must be non-negative")
-
         new_node = Node(value)
 
         if index == 0:
@@ -67,9 +64,6 @@ class LinkedList:
         while current and count < index - 1:
             current = current.next
             count += 1
-
-        if current is None:
-            raise IndexError("Index out of bounds")
 
         new_node.next = current.next
         current.next = new_node
@@ -126,34 +120,34 @@ class LinkedList:
 # 
 # Test scenarios
 # 
-# def test_linked_list():
-#     print("Testing LinkedList:")
+def test_linked_list():
+    print("Testing LinkedList:")
 
-#     ll = LinkedList()
-
-
-#     ll.append(1)
-#     ll.append(2)
-#     ll.append(3)
-#     print("After append:", ll) 
+    ll = LinkedList()
 
 
-#     ll.prepend(0)
-#     print("After prepend:", ll)
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    print("After append:", ll) 
 
 
-#     ll.insert_at(2, 1.5)
-#     print("After insert at index 2:", ll) 
+    ll.prepend(0)
+    print("After prepend:", ll)
 
 
-#     print("Index of 1.5:", ll.find(1.5)) 
-#     print("Index of 99:", ll.find(99))  
+    ll.insert_at(2, 1.5)
+    print("After insert at index 2:", ll) 
 
 
-#     ll.delete_by_value(1.5)
-#     print("After deleting 1.5:", ll) 
+    print("Index of 1.5:", ll.find(1.5)) 
+    print("Index of 99:", ll.find(99))  
 
 
-#     ll.reverse()
-#     print("After reverse:", ll) 
-# test_linked_list()
+    ll.delete_by_value(1.5)
+    print("After deleting 1.5:", ll) 
+
+
+    ll.reverse()
+    print("After reverse:", ll) 
+test_linked_list()
